@@ -4,6 +4,9 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
+import { en } from '@payloadcms/translations/languages/en'
+import { ja } from '@payloadcms/translations/languages/ja'
+import { zhTw } from '@payloadcms/translations/languages/zhTw'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -31,4 +34,12 @@ export default buildConfig({
   }),
   sharp,
   plugins: [],
+  i18n: {
+    fallbackLanguage: 'zh-TW',
+    supportedLanguages: {
+      'zh-TW': zhTw,
+      ja,
+      en,
+    },
+  },
 })

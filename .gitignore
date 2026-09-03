@@ -29,7 +29,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
+.env*
+*.env
+!.env.example
 
 # vercel
 .vercel
@@ -38,9 +40,21 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.env
-
+# media uploads
 /media
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# IDE & Editor configs
+.vscode/
+.idea/
+
+# AI configs
+.claude/
+CLAUDE.md
 
 # Playwright
 node_modules/
